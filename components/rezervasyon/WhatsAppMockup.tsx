@@ -70,7 +70,7 @@ export default function WhatsAppMockup({ messages, variant = 'phone', className 
       <div
         className={`relative ${
           isDesktop ? 'rounded-2xl w-full' : 'rounded-[32px] w-[300px] mx-auto'
-        } overflow-hidden border border-gray-200`}
+        } overflow-hidden border border-gray-200 backface-hidden transform-gpu`}
         style={{
           boxShadow: isDesktop
             ? '0 0 60px rgba(42,157,143,0.15)'
@@ -104,7 +104,7 @@ export default function WhatsAppMockup({ messages, variant = 'phone', className 
 
         {/* Notch for phone variant */}
         {!isDesktop && (
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[24px] bg-black rounded-b-xl z-20"></div>
+          <div className="absolute top-0 left-0 right-0 mx-auto w-[120px] h-[24px] bg-black rounded-b-xl z-20 backface-hidden transform-gpu"></div>
         )}
 
         {/* Chat area */}
