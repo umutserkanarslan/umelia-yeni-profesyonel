@@ -38,11 +38,11 @@ export default function ProductCard({ icon, title, description, pills, link, siz
             {icon}
           </div>
 
-          <h3 className="font-plus-jakarta font-[700] text-[21px] md:text-[23px] text-white mb-[10px] tracking-tight leading-[1.2]">
+          <h3 className="font-plus-jakarta font-[700] text-[24px] md:text-[26px] text-white mb-[12px] tracking-tight leading-[1.2]">
             {title}
           </h3>
 
-          <p className="font-inter font-normal text-[14px] md:text-[15px] leading-[1.7] text-[#7A8A9A] mb-[28px] max-w-[58ch]">
+          <p className="font-inter font-normal text-[15px] md:text-[16px] leading-[1.7] text-[#7A8A9A] mb-[28px] max-w-[58ch]">
             {description}
           </p>
 
@@ -52,7 +52,7 @@ export default function ProductCard({ icon, title, description, pills, link, siz
               {pills.map((pill, idx) => (
                 <div key={idx} className="flex items-center gap-[10px]">
                   <div className="w-[5px] h-[5px] rounded-full bg-teal shrink-0 opacity-70" />
-                  <span className="font-inter text-[13px] text-[#7A8A9A]">{pill}</span>
+                  <span className="font-inter text-[14px] text-[#7A8A9A]">{pill}</span>
                 </div>
               ))}
             </div>
@@ -60,7 +60,7 @@ export default function ProductCard({ icon, title, description, pills, link, siz
 
           {/* CTA — default layout */}
           {!isWide && (
-            <div className="mt-auto flex items-center gap-[6px] text-gold font-inter font-[500] text-[13px]">
+            <div className="mt-auto flex items-center gap-[6px] text-gold font-inter font-[500] text-[14px]">
               <span className="group-hover:underline underline-offset-[3px] transition-all duration-300">Detayları İncele</span>
               <ArrowRight className="w-[14px] h-[14px] transition-transform duration-300 group-hover:translate-x-[5px]" />
             </div>
@@ -83,12 +83,12 @@ export default function ProductCard({ icon, title, description, pills, link, siz
                     <div className="w-[26px] h-[26px] rounded-[8px] bg-[rgba(42,157,143,0.1)] border border-[rgba(42,157,143,0.18)] flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-[rgba(42,157,143,0.15)]">
                       <Check className="w-[13px] h-[13px] text-teal" />
                     </div>
-                    <span className="font-inter text-[13px] text-[#7A8A9A]">{pill}</span>
+                    <span className="font-inter text-[14px] text-[#7A8A9A]">{pill}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center gap-[6px] text-gold font-inter font-[500] text-[13px] mt-[32px]">
+              <div className="flex items-center gap-[6px] text-gold font-inter font-[500] text-[14px] mt-[32px]">
                 <span className="group-hover:underline underline-offset-[3px] transition-all duration-300">Detayları İncele</span>
                 <ArrowRight className="w-[14px] h-[14px] transition-transform duration-300 group-hover:translate-x-[5px]" />
               </div>

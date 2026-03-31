@@ -95,7 +95,7 @@ export default function Features() {
         </motion.div>
 
         {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-[16px]">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-[20px]">
           {features.map((feature, i) => (
             <motion.div
               key={i}
@@ -103,15 +103,15 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
-              className={`${colSpans[i]} group bg-[#ECEAE4] border border-[#DDD9D0] rounded-[16px] p-[36px] transition-all duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-[rgba(200,164,90,0.4)] hover:bg-white hover:-translate-y-[4px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)] will-change-transform`}
+              className={`${colSpans[i]} group bg-[#E5E2D9] border border-[#C8C4B8] rounded-[16px] p-[36px] transition-all duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-[rgba(200,164,90,0.4)] hover:bg-white hover:-translate-y-[4px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)] will-change-transform`}
             >
               <div className="w-[48px] h-[48px] rounded-[10px] bg-teal/[0.1] flex items-center justify-center mb-[24px] transition-colors duration-300 group-hover:bg-teal/[0.15]">
                 {feature.icon}
               </div>
-              <h3 className="font-plus-jakarta font-[700] text-navy text-[19px] mb-[12px] leading-[1.3]">
+              <h3 className="font-plus-jakarta font-[700] text-navy text-[22px] mb-[12px] leading-[1.3]">
                 {feature.title}
               </h3>
-              <p className="text-[#5A6A7E] text-[15px] leading-[1.7]">
+              <p className="text-[#5A6A7E] text-[16px] leading-[1.7]">
                 {feature.desc}
               </p>
             </motion.div>

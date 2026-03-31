@@ -72,7 +72,7 @@ export default function HowItWorks() {
         </motion.div>
 
         {/* Steps grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-[rgba(200,164,90,0.1)] rounded-[20px] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[3px] bg-[rgba(200,164,90,0.25)] rounded-[20px] overflow-hidden">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -82,16 +82,16 @@ export default function HowItWorks() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
               className="bg-[#F7F5F0] hover:bg-white transition-colors duration-300 p-[36px] md:p-[40px] flex flex-col will-change-transform group"
             >
-              <span className="text-[64px] font-[800] leading-none text-gold/40 tracking-tighter font-plus-jakarta mb-[20px] select-none">
+              <span className="text-[80px] font-[800] leading-none text-gold/60 tracking-tighter font-plus-jakarta mb-[20px] select-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div className="w-[44px] h-[44px] rounded-[10px] bg-teal/[0.1] flex items-center justify-center mb-[20px] shrink-0 transition-colors duration-300 group-hover:bg-teal/[0.15]">
                 {step.icon}
               </div>
-              <h3 className="font-plus-jakarta font-[700] text-navy text-[18px] mb-[10px] leading-[1.3]">
+              <h3 className="font-plus-jakarta font-[700] text-navy text-[21px] mb-[10px] leading-[1.3]">
                 {step.title}
               </h3>
-              <p className="text-[#5A6A7E] text-[15px] leading-[1.7]">
+              <p className="text-[#5A6A7E] text-[16px] leading-[1.7]">
                 {step.desc}
               </p>
             </motion.div>
