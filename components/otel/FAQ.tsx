@@ -76,18 +76,17 @@ export default function FAQ() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
-                  className={`border-b border-[#E0DCD5] transition-colors duration-200 will-change-transform ${isOpen ? "bg-[#FDFCF9]" : ""}`}
-                  style={isOpen ? { borderLeft: "3px solid #C8A45A", paddingLeft: "20px" } : { paddingLeft: "23px" }}
+                  className="border-b border-white/[0.06] border-[#E8E6E0] will-change-transform"
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between py-6 text-left"
+                    className="flex w-full items-center justify-between py-5 text-left"
                   >
-                    <span className={`pr-6 text-[16px] transition-all duration-200 ${isOpen ? "font-bold text-navy" : "font-semibold text-[#3A3A3A]"}`}>
+                    <span className="pr-6 text-[15px] font-medium text-navy">
                       {faq.q}
                     </span>
-                    <span className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xl font-medium text-gold transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>
-                      +
+                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center text-xl font-medium text-gold transition-none">
+                      {isOpen ? "−" : "+"}
                     </span>
                   </button>
                   <AnimatePresence>
@@ -99,7 +98,7 @@ export default function FAQ() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-6 pr-12 text-[15px] text-[#4A4A4A]" style={{ lineHeight: 1.7 }}>
+                        <p className="pb-5 pr-12 text-[14px] text-[#5A6A7E]" style={{ lineHeight: 1.7 }}>
                           {faq.a}
                         </p>
                       </motion.div>

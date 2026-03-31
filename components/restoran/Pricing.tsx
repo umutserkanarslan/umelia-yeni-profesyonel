@@ -82,7 +82,7 @@ export default function Pricing() {
             {/* Top gold gradient */}
             <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-gold/[0.10] to-transparent pointer-events-none" />
             
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-gold text-navy text-[12px] font-bold px-5 py-2 rounded-b-xl uppercase tracking-wider shadow-sm">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-gold text-navy text-[12px] font-bold px-5 py-2 rounded-b-[6px] uppercase tracking-wider shadow-sm">
               Tavsiye Edilen
             </div>
 
@@ -133,7 +133,7 @@ export default function Pricing() {
           transition={{ duration: 0.3, delay: 0.2 }}
           className="mt-12 flex justify-center will-change-transform"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border-l-[3px] border-teal bg-teal/[0.08] px-6 py-2.5 text-sm font-medium text-teal">
+          <div className="inline-flex items-center gap-2 rounded-[6px] border-l-[3px] border-teal bg-teal/[0.08] px-6 py-2.5 text-sm font-medium text-teal">
             ✨ Beğenmezseniz iptal edin. Ödeme yok
           </div>
         </motion.div>

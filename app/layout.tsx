@@ -1,25 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Playfair_Display, Libre_Baskerville } from "next/font/google";
+import { DM_Sans, Outfit, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500"],
   variable: "--font-inter",
   display: "swap",
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-plus-jakarta",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -50,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      className={`${inter.variable} ${plusJakartaSans.variable} ${playfair.variable} ${libreBaskerville.variable}`}
+      className={`${dmSans.variable} ${outfit.variable} ${libreBaskerville.variable}`}
     >
       <body className="bg-navy text-off-white antialiased overflow-x-hidden min-h-screen">
         {children}

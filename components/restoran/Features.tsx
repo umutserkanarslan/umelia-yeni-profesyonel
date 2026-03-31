@@ -1,92 +1,126 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { QrCode, RefreshCcw, BellRing, ArrowRightSquare, MessageSquare, BarChart3 } from "lucide-react";
 
 const features = [
   {
-    title: "Her Masaya Özel QR Kod",
-    desc: "Her masanın kendine özel QR kodu var → masa numarası otomatik tanınır. Müşteri hiçbir şey girmez, tarar ve başlar.",
-    icon: QrCode,
+    title: "Garson Bekleme Yok",
+    desc: "Müşteri doğrudan sipariş veriyor. Garsonun sipariş almasını beklemeye gerek yok — masa devir hızı artar.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </svg>
+    ),
   },
   {
     title: "Dinamik Menü",
-    desc: "Menüyü istediğiniz zaman güncelleyin → fiyat, ürün, açıklama. Değişiklik anında sisteme yansır.",
-    icon: RefreshCcw,
+    desc: "Menüyü istediğiniz zaman güncelleyin. Tükenmiş ürünü kapatın, fiyat değişikliğini anında yansıtın.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+      </svg>
+    ),
   },
   {
-    title: "Mutfağa Formatlanmış Bildirim",
-    desc: "Mutfağa düzenli bildirim düşer: masa numarası, sipariş kalemleri, adetler, notlar ve saat.",
-    icon: BellRing,
+    title: "Anlık Mutfak Bildirimi",
+    desc: "Sipariş onaylanır onaylanmaz mutfak bildirim alır: masa numarası, ürünler, adetler, özel notlar.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+      </svg>
+    ),
   },
   {
-    title: "Hazır → Garsona Bildirim",
-    desc: "Mutfak 'Hazır' butonuna basınca garsona anlık servis bildirimi gider. Sipariş masada soğumaz.",
-    icon: ArrowRightSquare,
-  },
-  {
-    title: "Müşteriye WhatsApp Onay",
-    desc: "Sipariş verildiğinde müşteriye otomatik onay ve tahmini süre gider. Müşteri ne zaman geleceğini bilir.",
-    icon: MessageSquare,
+    title: "Sipariş Hatası Sıfır",
+    desc: "Müşteri kendi siparişini giriyor. Yanlış anlama, karalanmış not yok — mutfak tam siparişi görür.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+    ),
   },
   {
     title: "Günlük Ciro Raporu",
-    desc: "Gün sonunda otomatik ciro özeti → en çok satan ürünler, toplam sipariş ve gelir. Rapor doğrudan size ulaşır.",
-    icon: BarChart3,
+    desc: "Gün sonunda otomatik rapor: toplam sipariş, en çok satılan ürünler, masa bazlı ciro.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+      </svg>
+    ),
   },
+  {
+    title: "Çoklu Dil Desteği",
+    desc: "Menü otomatik olarak müşterinin tercih ettiği dile çevrilir. Yabancı turistler rahatça sipariş verir.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+      </svg>
+    ),
+  },
+];
+
+const colSpans = [
+  "md:col-span-3",
+  "md:col-span-2",
+  "md:col-span-2",
+  "md:col-span-3",
+  "md:col-span-3",
+  "md:col-span-2",
 ];
 
 export default function Features() {
   return (
-    <section id="ozellikler" className="bg-white py-28 md:py-32 lg:py-36 relative">
+    <section id="ozellikler" className="bg-white py-[120px]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="mb-16 md:mb-20 max-w-2xl">
-          <motion.h2 
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.3 }}
-            className="text-navy font-[family-name:var(--font-heading)] font-extrabold text-3xl md:text-[40px] mb-4 will-change-transform"
-          >
-            Neden Bu Sistem?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.3, delay: 0.05 }}
-            className="text-muted text-lg md:text-[18px] will-change-transform"
-          >
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
+          className="mb-[64px] will-change-transform"
+        >
+          <div className="flex items-center gap-[12px] mb-[20px]">
+            <div className="w-[28px] h-[1px] bg-gold opacity-50" />
+            <span className="text-gold text-[11px] uppercase tracking-[0.22em] font-plus-jakarta font-semibold">Özellikler</span>
+          </div>
+          <h2 className="text-navy text-[36px] md:text-[44px] font-plus-jakarta font-[800] leading-[1.1] tracking-tight mb-[16px]">
+            Neden bu sistem?
+          </h2>
+          <p className="text-[#5A6A7E] text-[16px] leading-[1.65] max-w-[420px]">
             Her özellik, gerçek restoran ihtiyaçlarından doğdu.
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {features.map((feature, index) => (
+        {/* Bento grid */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-[16px]">
+          {features.map((feature, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
+              key={i}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="group flex flex-col sm:flex-row gap-5 bg-[#F9F7F3] p-7 md:p-8 rounded-2xl border border-border-warm shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:border-gold hover:scale-[1.01] transition-all duration-300 will-change-transform"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
+              className={`${colSpans[i]} group bg-[#ECEAE4] border border-[#DDD9D0] rounded-[16px] p-[36px] transition-all duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-[rgba(200,164,90,0.4)] hover:bg-white hover:-translate-y-[4px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)] will-change-transform`}
             >
-              <div className="flex-shrink-0 w-14 h-14 rounded-full bg-teal/[0.12] flex items-center justify-center group-hover:bg-teal group-hover:text-white transition-colors duration-300">
-                <feature.icon className="text-teal group-hover:text-white w-7 h-7 transition-colors" strokeWidth={1.5} />
+              <div className="w-[48px] h-[48px] rounded-[10px] bg-teal/[0.1] flex items-center justify-center mb-[24px] transition-colors duration-300 group-hover:bg-teal/[0.15]">
+                {feature.icon}
               </div>
-              <div>
-                <h3 className="text-navy font-bold text-lg mb-2">{feature.title}</h3>
-                <p className="text-[#4A4A4A] text-[15px] leading-[1.65]">
-                  {feature.desc}
-                </p>
-              </div>
+              <h3 className="font-plus-jakarta font-[700] text-navy text-[19px] mb-[12px] leading-[1.3]">
+                {feature.title}
+              </h3>
+              <p className="text-[#5A6A7E] text-[15px] leading-[1.7]">
+                {feature.desc}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
-      
-      {/* Wave down to Live Demo (Navy) */}
-      <div className="mt-28 md:mt-32">
+
+      {/* Wave to navy LiveDemo */}
+      <div className="mt-[120px]">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="block w-full" preserveAspectRatio="none">
           <path d="M0 0V40C240 80 480 80 720 50C960 20 1200 0 1440 30V0H0Z" fill="#FFFFFF" />
           <path d="M0 40C240 80 480 80 720 50C960 20 1200 0 1440 30V80H0V40Z" fill="#0A1628" />

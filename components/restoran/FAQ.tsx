@@ -71,22 +71,20 @@ export default function FAQ() {
           </div>
 
           <div className="w-full lg:w-[65%]">
-            <div className="flex flex-col divide-y divide-border-warm border-t border-border-warm">
+            <div className="flex flex-col border-t border-navy/[0.08]">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
                 return (
-                  <div key={index} className="overflow-hidden group">
+                  <div key={index} className="border-b border-navy/[0.08]">
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : index)}
-                      className={`w-full flex items-center justify-between py-6 md:py-8 text-left transition-all ${
-                        isOpen ? "bg-[#FDFCF9] pl-6 border-l-[3px] border-gold" : "hover:bg-[#FDFCF9]/[0.50] pl-2 lg:pl-4 border-l-[3px] border-transparent"
-                      }`}
+                      className="w-full flex items-center justify-between py-5 text-left transition-colors"
                     >
-                      <h3 className={`font-bold pr-8 text-[16px] md:text-[18px] transition-colors leading-snug ${isOpen ? "text-navy" : "text-body-text group-hover:text-navy"}`}>
+                      <h3 className="text-navy font-medium text-[15px] pr-8 leading-snug">
                         {faq.question}
                       </h3>
-                      <span className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-sm border border-border-warm text-xl font-medium text-gold transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>
-                        +
+                      <span className="flex-shrink-0 text-gold text-xl font-medium leading-none w-6 text-center">
+                        {isOpen ? "−" : "+"}
                       </span>
                     </button>
                     <AnimatePresence initial={false}>
@@ -97,7 +95,7 @@ export default function FAQ() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                         >
-                          <div className="pb-8 pt-2 pl-6 pr-6 md:pr-12 text-body-text text-[15px] md:text-[16px] leading-[1.75] border-l-[3px] border-gold bg-[#FDFCF9]">
+                          <div className="text-[#5A6A7E] text-[14px] leading-[1.7] pb-5 pr-8">
                             {faq.answer}
                           </div>
                         </motion.div>

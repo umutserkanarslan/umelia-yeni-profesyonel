@@ -75,7 +75,7 @@ export default function Pricing() {
             >
               {/* Recommended Badge */}
               {plan.recommended && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gold px-5 py-1.5 text-xs font-bold text-navy shadow-md">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-[6px] bg-gold px-5 py-1.5 text-xs font-bold text-navy shadow-md">
                   Tavsiye Edilen
                 </div>
               )}
@@ -118,7 +118,7 @@ export default function Pricing() {
                 href="#iletisim"
                 className={`mt-auto block rounded-xl py-4 text-center text-base font-bold transition-all duration-300 ${
                   plan.recommended
-                    ? "bg-gold text-navy shadow-md hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(200,164,90,0.4)]"
+                    ? "bg-gold text-navy shadow-md hover:scale-[1.02] hover:shadow-[0_8px_28px_rgba(200,164,90,0.18)] hover:-translate-y-[2px]"
                     : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
                 }`}
               >
@@ -136,7 +136,7 @@ export default function Pricing() {
           transition={{ duration: 0.3, delay: 0.1 }}
           className="mt-10 flex justify-center will-change-transform"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border-l-[3px] border-teal bg-teal/[0.08] px-6 py-2.5 text-sm font-medium text-teal">
+          <div className="inline-flex items-center gap-2 rounded-[6px] border-l-[3px] border-teal bg-teal/[0.08] px-6 py-2.5 text-sm font-medium text-teal">
             ✨ Beğenmezseniz iptal edin. Ödeme yok
           </div>
         </motion.div>

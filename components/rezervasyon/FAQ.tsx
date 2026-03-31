@@ -74,40 +74,31 @@ export default function FAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className={`border-b border-border-warm will-change-transform ${
-                  openIndex === i ? 'border-l-[3px] border-l-gold bg-[#FDFCF9] -mx-4 px-4 rounded-r-lg' : ''
-                }`}
+                className="border-b border-white/[0.06] will-change-transform"
+                style={{ borderBottomColor: 'rgba(10,22,40,0.08)' }}
               >
                 <button
                   onClick={() => toggle(i)}
                   className="w-full flex items-center justify-between py-5 text-left group"
                 >
-                  <span
-                    className={`font-[family-name:var(--font-heading)] font-semibold text-[15px] lg:text-base pr-4 transition-colors ${
-                      openIndex === i ? 'text-navy font-bold' : 'text-navy/80'
-                    }`}
-                  >
+                  <span className="text-navy font-medium text-[16px] pr-4">
                     {item.q}
                   </span>
-                  <span
-                    className={`shrink-0 text-gold text-xl font-light transition-transform duration-300 ${
-                      openIndex === i ? 'rotate-45' : 'rotate-0'
-                    }`}
-                  >
-                    +
+                  <span className="shrink-0 text-gold text-xl font-light leading-none w-5 text-center">
+                    {openIndex === i ? '−' : '+'}
                   </span>
                 </button>
 
                 <AnimatePresence>
                   {openIndex === i && (
-                     <motion.div
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-[#4A4A4A] text-[15px] leading-[1.7] pb-5">
+                      <p className="text-[#5A6A7E] text-[14px] leading-[1.7] pb-5">
                         {item.a}
                       </p>
                     </motion.div>

@@ -15,15 +15,15 @@
   --color-wa-green: #DCF8C6;
   --color-wa-bg: #E5DDD5;
 
-  /* Fonts — homepage shorthand names */
-  --font-plus-jakarta: "Plus Jakarta Sans", "Inter", "Manrope", sans-serif;
-  --font-inter: "Inter", "DM Sans", sans-serif;
+  /* Fonts — class names map to CSS variables */
+  --font-plus-jakarta: "Outfit", "Manrope", sans-serif;
+  --font-inter: "DM Sans", "Manrope", sans-serif;
   --font-libre-baskerville: "Libre Baskerville", serif;
   --font-playfair: "Playfair Display", serif;
 
-  /* Fonts — landing page names (aliases) */
-  --font-heading: "Plus Jakarta Sans", "Inter", "Manrope", sans-serif;
-  --font-body: "Inter", "DM Sans", sans-serif;
+  /* Fonts — semantic aliases */
+  --font-heading: "Outfit", "Manrope", sans-serif;
+  --font-body: "DM Sans", "Manrope", sans-serif;
   --font-brand: "Libre Baskerville", serif;
 }
 
@@ -80,12 +80,12 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-off-white);
+  background: #0A1628;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-muted);
+  background: #1E2D44;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-navy);
+  background: #C8A45A;
 }

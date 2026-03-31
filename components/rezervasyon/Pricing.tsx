@@ -66,8 +66,8 @@ export default function Pricing() {
             </div>
 
             <a
-              href="https://wa.me/905316745900" 
-              target="_blank" 
+              href="https://wa.me/905316745900"
+              target="_blank"
               rel="noopener noreferrer"
               className="block text-center border-2 border-navy text-navy font-[family-name:var(--font-heading)] font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all duration-300"
             >
@@ -87,7 +87,7 @@ export default function Pricing() {
             }}
           >
             {/* Badge */}
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-navy font-[family-name:var(--font-heading)] font-bold text-xs px-5 py-1.5 rounded-full shadow-md">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-navy font-[family-name:var(--font-heading)] font-bold text-xs px-5 py-1.5 rounded-[6px] shadow-md">
               Tavsiye Edilen
             </div>
 
@@ -119,9 +119,9 @@ export default function Pricing() {
 
             <a
               href="https://wa.me/905316745900"
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
-              className="block text-center bg-gold text-navy font-[family-name:var(--font-heading)] font-bold text-[15px] px-6 py-4 rounded-xl hover:shadow-[0_0_24px_rgba(200,164,90,0.4)] hover:scale-[1.02] transition-all duration-300"
+              className="block text-center bg-gold text-navy font-[family-name:var(--font-heading)] font-bold text-[15px] px-6 py-4 rounded-xl hover:shadow-[0_8px_28px_rgba(200,164,90,0.18)] hover:-translate-y-[2px] hover:scale-[1.02] transition-all duration-300"
             >
               14 Gün Ücretsiz Başlayın
             </a>
