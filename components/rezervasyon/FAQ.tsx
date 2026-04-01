@@ -54,7 +54,7 @@ export default function FAQ() {
             className="lg:w-[35%] shrink-0 will-change-transform"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
           >
             <h2 className="font-[family-name:var(--font-heading)] font-extrabold text-navy text-[28px] lg:text-[32px] mb-3 sticky top-28">
@@ -72,7 +72,7 @@ export default function FAQ() {
                 key={i}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
                 className="border-b border-[#E0DDD5] last:border-b-0 px-5 will-change-transform"
               >

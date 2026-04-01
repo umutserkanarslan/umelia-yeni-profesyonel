@@ -45,7 +45,7 @@ export default function Pricing() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="mb-16 text-center will-change-transform"
         >
@@ -64,7 +64,7 @@ export default function Pricing() {
               key={i}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
               className={`will-change-transform relative flex flex-1 flex-col rounded-2xl p-8 transition-all duration-300 md:p-10 ${
                 plan.recommended
@@ -132,7 +132,7 @@ export default function Pricing() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.1 }}
           className="mt-10 flex justify-center will-change-transform"
         >

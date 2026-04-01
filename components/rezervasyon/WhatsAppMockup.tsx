@@ -25,7 +25,7 @@ function WhatsAppBubble({ msg, index }: { msg: Message; index: number }) {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{ delay: index * 0.05, duration: 0.3 }}
       className={`flex ${isOutgoing ? 'justify-end' : 'justify-start'} mb-2 will-change-transform`}
     >

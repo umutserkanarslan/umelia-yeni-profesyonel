@@ -50,7 +50,7 @@ export default function SocialProof() {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.3, delay: 0.05 }}
       className="max-w-[1200px] mx-auto px-6 pb-20 will-change-transform relative z-20"
     >
@@ -99,45 +99,41 @@ function CountUpNumber({ value }: { value: string }) {
 }
 
 function animateValue(target: string, setDisplay: (v: string) => void) {
-  // Extract numeric part
-  const numMatch = target.match(/[\d.]+/)
-  if (!numMatch) {
+  // Don't animate non-numeric values like "7/24"
+  if (target.includes('/')) {
     setDisplay(target)
     return
   }
-  const numStr = numMatch[0].replace('.', '')
-  const targetNum = parseInt(numStr)
-  const prefix = target.slice(0, target.indexOf(numMatch[0]))
-  const suffix = target.slice(target.indexOf(numMatch[0]) + numMatch[0].length)
-  const hasDecimalDot = numMatch[0].includes('.')
 
-  const duration = 1500
+  const suffix = target.endsWith('+') ? '+' : ''
+  const useThousandsDot = /\d{1,3}\.\d{3}/.test(target)
+  const targetNum = parseInt(target.replace(/\./g, '').replace(/\+/g, ''))
+
+  if (isNaN(targetNum)) {
+    setDisplay(target)
+    return
+  }
+
+  const format = (n: number): string => {
+    if (useThousandsDot && n >= 1000) {
+      return Math.floor(n / 1000) + '.' + String(n % 1000).padStart(3, '0')
+    }
+    return n.toString()
+  }
+
+  const duration = 1200
   const steps = 40
   const stepTime = duration / steps
-
   let step = 0
+
   const interval = setInterval(() => {
     step++
-    const progress = step / steps
-    const eased = 1 - Math.pow(1 - progress, 3) // ease out cubic
-    const current = Math.round(targetNum * eased)
-
-    let formatted = current.toString()
-    if (hasDecimalDot) {
-      // Insert dot in same position
-      const dotPos = numMatch[0].indexOf('.')
-      if (formatted.length > dotPos) {
-        formatted = formatted.slice(0, -dotPos + formatted.length - numStr.length + dotPos) + '.' + formatted.slice(-dotPos + formatted.length - numStr.length + dotPos)
-      }
-      // Simpler approach: just format like the target
-      formatted = current >= 1000 ? Math.floor(current / 1000) + '.' + String(current % 1000).padStart(3, '0').slice(0, -1 + numMatch[0].split('.')[1].length + 1) : current.toString()
-    }
-
     if (step >= steps) {
       setDisplay(target)
       clearInterval(interval)
-    } else {
-      setDisplay(prefix + formatted + suffix)
+      return
     }
+    const eased = 1 - Math.pow(1 - step / steps, 3)
+    setDisplay(format(Math.round(targetNum * eased)) + suffix)
   }, stepTime)
 }

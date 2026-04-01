@@ -18,7 +18,7 @@ export default function CTA() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="will-change-transform"
         >
@@ -36,7 +36,7 @@ export default function CTA() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 will-change-transform"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.05 }}
         >
           <a
@@ -66,7 +66,7 @@ export default function CTA() {
           className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 will-change-transform"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.05 }}
         >
           {[

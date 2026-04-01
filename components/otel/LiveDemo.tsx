@@ -44,7 +44,7 @@ export default function LiveDemo() {
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="mb-14 text-center font-[family-name:var(--font-heading)] text-3xl font-extrabold text-white md:text-[40px] will-change-transform"
         >
@@ -57,7 +57,7 @@ export default function LiveDemo() {
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="will-change-transform w-full overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(42,157,143,0.15)] md:flex-1"
           >
@@ -89,7 +89,7 @@ export default function LiveDemo() {
                   key={i}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.3, delay: 0.1 + i * 0.05 }}
                   className={`flex will-change-transform ${msg.role === "ai" ? "justify-end" : "justify-start"}`}
                 >
@@ -125,7 +125,7 @@ export default function LiveDemo() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.1 }}
             className="flex flex-col items-center justify-center gap-4 px-6 py-6 md:px-12 will-change-transform"
           >
@@ -147,7 +147,7 @@ export default function LiveDemo() {
           <motion.div
             initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
             className="will-change-transform flex w-full flex-col overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(200,164,90,0.12)] md:flex-1"
           >
@@ -165,7 +165,7 @@ export default function LiveDemo() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.3, delay: 0.1 }}
                 className="rounded-xl bg-[#182533] p-5 will-change-transform"
               >
@@ -185,7 +185,7 @@ export default function LiveDemo() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.3, delay: 0.15 }}
                 className="mt-4 rounded-xl bg-[#182533]/60 p-5 will-change-transform"
               >

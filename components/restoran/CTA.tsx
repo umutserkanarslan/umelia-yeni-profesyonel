@@ -21,7 +21,7 @@ export default function CTA() {
         <motion.h2 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="text-white font-[family-name:var(--font-heading)] font-extrabold text-[32px] md:text-[46px] mb-6 leading-[1.15] tracking-tight will-change-transform"
         >
@@ -32,7 +32,7 @@ export default function CTA() {
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.05 }}
           className="text-light-gray text-lg md:text-[20px] mb-12 will-change-transform"
         >
@@ -42,7 +42,7 @@ export default function CTA() {
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.1 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16 will-change-transform"
         >
@@ -70,7 +70,7 @@ export default function CTA() {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.15 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-light-gray text-[15px] font-medium will-change-transform"
         >

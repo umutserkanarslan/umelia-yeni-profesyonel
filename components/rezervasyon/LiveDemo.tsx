@@ -59,7 +59,7 @@ export default function LiveDemo() {
           className="text-center mb-16 will-change-transform"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
         >
           <h2 className="font-[family-name:var(--font-heading)] font-extrabold text-white text-3xl lg:text-[36px] mb-4">
@@ -77,7 +77,7 @@ export default function LiveDemo() {
             className="w-full lg:w-[55%] will-change-transform"
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
           >
             <WhatsAppMockup messages={demoMessages} variant="desktop" />
@@ -88,7 +88,7 @@ export default function LiveDemo() {
             className="flex flex-col items-center justify-center py-4 lg:py-0 lg:px-2 will-change-transform"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
           >
             <p className="text-light-gray text-xs text-center mb-3 max-w-[120px] leading-tight">
@@ -107,7 +107,7 @@ export default function LiveDemo() {
             className="w-full lg:w-[45%] flex items-center will-change-transform"
             initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
           >
             <div
@@ -143,7 +143,7 @@ export default function LiveDemo() {
                     key={i}
                     initial={{ opacity: 0, x: 10 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true, margin: "-40px" }}
                     transition={{ delay: 0.05 + i * 0.05, duration: 0.3 }}
                     className={`text-sm will-change-transform ${line.bold ? 'text-gold font-bold text-base' : 'text-gray-300'}`}
                   >

@@ -19,7 +19,7 @@ export default function Pricing() {
           className="text-center mb-16 will-change-transform"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
         >
           <h2 className="font-[family-name:var(--font-heading)] font-extrabold text-navy text-3xl lg:text-[36px] mb-4">
@@ -36,7 +36,7 @@ export default function Pricing() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="bg-white rounded-[20px] border border-border-warm shadow-[0_4px_24px_rgba(0,0,0,0.06)] p-8 will-change-transform"
           >
@@ -79,7 +79,7 @@ export default function Pricing() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
             className="bg-white rounded-[20px] border-2 border-gold shadow-[0_12px_48px_rgba(0,0,0,0.1)] p-8 relative -translate-y-0 md:-translate-y-3 will-change-transform"
             style={{
@@ -133,7 +133,7 @@ export default function Pricing() {
           className="mt-10 flex justify-center will-change-transform"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.05 }}
         >
           <div className="inline-flex items-center gap-2 bg-teal/[0.08] border-l-[3px] border-teal text-teal text-sm font-medium px-5 py-2.5 rounded-r-lg">

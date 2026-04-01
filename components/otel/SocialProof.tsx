@@ -76,7 +76,7 @@ export default function SocialProof() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-0 md:divide-x md:divide-border-warm will-change-transform"
         >

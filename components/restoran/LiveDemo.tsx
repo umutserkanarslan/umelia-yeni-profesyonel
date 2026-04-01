@@ -12,7 +12,7 @@ export default function LiveDemo() {
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="text-white font-[family-name:var(--font-heading)] font-extrabold text-3xl md:text-[40px] mb-4 will-change-transform"
           >
@@ -21,7 +21,7 @@ export default function LiveDemo() {
           <motion.p 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
             className="text-light-gray text-lg md:text-[18px] max-w-[600px] mx-auto will-change-transform"
           >
@@ -34,7 +34,7 @@ export default function LiveDemo() {
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="relative will-change-transform shrink-0 scale-95 lg:scale-[0.85] xl:scale-100 origin-center"
           >
@@ -98,7 +98,7 @@ export default function LiveDemo() {
           <motion.div
             initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.1 }}
             className="will-change-transform shrink-0 scale-95 lg:scale-[0.85] xl:scale-100 origin-center"
           >
@@ -137,7 +137,7 @@ export default function LiveDemo() {
           <motion.div
             initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.2 }}
             className="will-change-transform shrink-0 scale-95 lg:scale-[0.85] xl:scale-100 origin-center"
           >

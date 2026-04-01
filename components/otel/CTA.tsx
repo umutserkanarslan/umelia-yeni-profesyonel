@@ -22,7 +22,7 @@ export default function CTA() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="will-change-transform"
         >
@@ -39,7 +39,7 @@ export default function CTA() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.1 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center will-change-transform"
         >
@@ -68,7 +68,7 @@ export default function CTA() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.15 }}
           className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10 will-change-transform"
         >
