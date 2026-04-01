@@ -11,23 +11,30 @@ function AnimatedCounter({ target }: { target: string }) {
 
   useEffect(() => {
     if (!isInView) return;
-    const match = target.match(/^(\d+)(.*)$/);
-    if (!match) {
-      setDisplay(target);
-      return;
-    }
-    const numericValue = parseInt(match[1]);
-    const textSuffix = match[2];
-    const duration = 1500;
+    if (target.includes('/')) { setDisplay(target); return; }
+
+    const suffix = target.endsWith('+') ? '+' : '';
+    const useThousandsDot = /\d{1,3}\.\d{3}/.test(target);
+    const numericValue = parseInt(target.replace(/\./g, '').replace(/\+/g, ''));
+    if (isNaN(numericValue)) { setDisplay(target); return; }
+
+    const format = (n: number) => {
+      if (useThousandsDot && n >= 1000) {
+        return Math.floor(n / 1000) + '.' + String(n % 1000).padStart(3, '0');
+      }
+      return String(n);
+    };
+
+    const duration = 1200;
     const startTime = Date.now();
     const tick = () => {
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = Math.floor(eased * numericValue);
-      setDisplay(String(current) + textSuffix);
-      if (progress < 1) requestAnimationFrame(tick);
-      else setDisplay(target);
+      if (progress >= 1) { setDisplay(target); return; }
+      setDisplay(format(current) + suffix);
+      requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
   }, [isInView, target]);
