@@ -17,8 +17,8 @@ export default function Pricing() {
         {/* Title */}
         <motion.div
           className="text-center mb-16 will-change-transform"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
         >
@@ -34,8 +34,8 @@ export default function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[900px] mx-auto">
           {/* Card 1 — Başlangıç */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="bg-white rounded-[20px] border border-border-warm shadow-[0_4px_24px_rgba(0,0,0,0.06)] p-8 will-change-transform"
@@ -77,8 +77,8 @@ export default function Pricing() {
 
           {/* Card 2 — Profesyonel (Recommended) */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
             className="bg-white rounded-[20px] border-2 border-gold shadow-[0_12px_48px_rgba(0,0,0,0.1)] p-8 relative -translate-y-0 md:-translate-y-3 will-change-transform"

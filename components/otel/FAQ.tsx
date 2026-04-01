@@ -51,8 +51,8 @@ export default function FAQ() {
         <div className="flex flex-col gap-12 md:flex-row md:gap-16 lg:gap-20">
           {/* Left Title — 35% */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="md:w-[35%] md:flex-shrink-0 will-change-transform"
@@ -72,8 +72,8 @@ export default function FAQ() {
               return (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
                   className="border-b border-[#E0DDD5] last:border-b-0 px-5 will-change-transform"

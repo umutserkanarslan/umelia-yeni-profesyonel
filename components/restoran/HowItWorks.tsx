@@ -68,8 +68,8 @@ export default function HowItWorks() {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
           className="mb-[64px] will-change-transform"
@@ -91,10 +91,10 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
+              transition={{ duration: 0.5, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
               className="bg-[#F7F5F0] hover:bg-white transition-colors duration-300 p-[36px] md:p-[40px] flex flex-col will-change-transform group"
             >
               <span className="text-[80px] font-[800] leading-none text-gold/60 tracking-tighter font-plus-jakarta mb-[20px] select-none">

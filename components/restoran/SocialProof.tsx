@@ -39,8 +39,8 @@ const metrics = [
 export default function SocialProof() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.3, delay: 0.1 }}
       className="mx-auto flex w-fit flex-col items-center justify-center gap-8 rounded-2xl border border-white/[0.08] bg-white/[0.04] px-10 py-8 backdrop-blur-sm md:flex-row md:gap-0 md:divide-x md:divide-white/[0.15] md:px-10 md:py-7 will-change-transform"

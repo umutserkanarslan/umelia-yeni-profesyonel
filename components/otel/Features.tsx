@@ -80,8 +80,8 @@ export default function Features() {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
           className="mb-[64px] will-change-transform"
@@ -103,10 +103,10 @@ export default function Features() {
           {features.map((feature, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
+              transition={{ duration: 0.5, delay: i * 0.03, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
               className={`${colSpans[i]} group bg-[#E5E2D9] border border-[#C8C4B8] rounded-[16px] p-[36px] transition-all duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-[rgba(200,164,90,0.4)] hover:bg-white hover:-translate-y-[4px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)] will-change-transform`}
             >
               <div className="w-[48px] h-[48px] rounded-[10px] bg-teal/[0.1] flex items-center justify-center mb-[24px] transition-colors duration-300 group-hover:bg-teal/[0.15]">

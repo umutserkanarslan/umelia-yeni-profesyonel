@@ -51,8 +51,8 @@ export default function FAQ() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           <div className="w-full lg:w-[35%] lg:pt-4">
              <motion.h2 
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.3 }}
               className="text-navy font-[family-name:var(--font-heading)] font-extrabold text-3xl md:text-[38px] mb-4 leading-tight will-change-transform"
@@ -60,8 +60,8 @@ export default function FAQ() {
               Sıkça Sorulan Sorular
             </motion.h2>
             <motion.p 
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.3, delay: 0.05 }}
               className="text-muted text-lg md:text-[18px] will-change-transform"

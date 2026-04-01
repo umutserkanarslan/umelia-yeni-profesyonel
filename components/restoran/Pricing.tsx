@@ -8,8 +8,8 @@ export default function Pricing() {
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="text-center mb-16 md:mb-20">
           <motion.h2 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="text-navy font-[family-name:var(--font-heading)] font-extrabold text-3xl md:text-[40px] mb-4 will-change-transform"
@@ -17,8 +17,8 @@ export default function Pricing() {
             Şeffaf Fiyatlandırma
           </motion.h2>
           <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
             className="text-muted text-lg md:text-[18px] max-w-[500px] mx-auto will-change-transform"
@@ -30,8 +30,8 @@ export default function Pricing() {
         <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8 md:gap-6 lg:gap-8 max-w-[900px] mx-auto">
           {/* Card 1 - Başlangıç */}
           <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
             className="w-full md:w-1/2 bg-white rounded-[24px] p-8 md:p-10 border border-border-warm shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-shadow flex flex-col will-change-transform"
@@ -73,8 +73,8 @@ export default function Pricing() {
 
           {/* Card 2 - Profesyonel (Recommended) */}
           <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.1 }}
             className="w-full md:w-1/2 bg-white rounded-[24px] p-8 md:p-10 border-2 border-gold shadow-[0_20px_60px_rgba(200,164,90,0.15)] relative md:-translate-y-4 flex flex-col overflow-hidden will-change-transform"
@@ -127,8 +127,8 @@ export default function Pricing() {
 
         {/* Free trial badge */}
         <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.2 }}
           className="mt-12 flex justify-center will-change-transform"

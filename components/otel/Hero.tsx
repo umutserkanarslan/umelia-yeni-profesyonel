@@ -106,7 +106,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 pb-12 pt-28 md:flex-row md:gap-8 md:pb-16 md:pt-32 lg:pb-20 lg:pt-36">
         {/* Left Side — Text */}
         <motion.div
-          initial={{ opacity: 0, x: -10 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="flex-[55] text-center md:text-left will-change-transform"

@@ -13,8 +13,8 @@ export default function CustomCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gold opacity-[0.025] blur-[150px] rounded-full pointer-events-none"></div>
 
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 flex flex-col items-center max-w-[680px] text-center will-change-transform"

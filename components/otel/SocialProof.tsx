@@ -74,8 +74,8 @@ export default function SocialProof() {
     <section className="bg-off-white py-16 md:py-20">
       <div className="mx-auto max-w-[1200px] px-6">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-0 md:divide-x md:divide-border-warm will-change-transform"

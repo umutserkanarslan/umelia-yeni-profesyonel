@@ -57,8 +57,8 @@ export default function LiveDemo() {
         {/* Title */}
         <motion.div
           className="text-center mb-16 will-change-transform"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
         >
@@ -75,8 +75,8 @@ export default function LiveDemo() {
           {/* WhatsApp Chat - Left 55% */}
           <motion.div
             className="w-full lg:w-[55%] will-change-transform"
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
           >
@@ -106,7 +106,7 @@ export default function LiveDemo() {
           <motion.div
             className="w-full lg:w-[45%] flex items-center will-change-transform"
             initial={{ opacity: 0, x: 10 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3, delay: 0.05 }}
           >
@@ -142,7 +142,7 @@ export default function LiveDemo() {
                   <motion.p
                     key={i}
                     initial={{ opacity: 0, x: 10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true, margin: "-40px" }}
                     transition={{ delay: 0.05 + i * 0.05, duration: 0.3 }}
                     className={`text-sm will-change-transform ${line.bold ? 'text-gold font-bold text-base' : 'text-gray-300'}`}

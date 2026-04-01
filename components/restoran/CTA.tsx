@@ -19,8 +19,8 @@ export default function CTA() {
 
       <div className="max-w-[800px] mx-auto px-6 text-center relative z-10">
         <motion.h2 
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3 }}
           className="text-white font-[family-name:var(--font-heading)] font-extrabold text-[32px] md:text-[46px] mb-6 leading-[1.15] tracking-tight will-change-transform"
@@ -30,8 +30,8 @@ export default function CTA() {
         </motion.h2>
         
         <motion.p 
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.05 }}
           className="text-light-gray text-lg md:text-[20px] mb-12 will-change-transform"
@@ -40,8 +40,8 @@ export default function CTA() {
         </motion.p>
 
         <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.3, delay: 0.1 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16 will-change-transform"

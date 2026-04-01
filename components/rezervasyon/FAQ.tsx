@@ -52,8 +52,8 @@ export default function FAQ() {
           {/* Left title — 35% */}
           <motion.div
             className="lg:w-[35%] shrink-0 will-change-transform"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.3 }}
           >
@@ -70,8 +70,8 @@ export default function FAQ() {
             {faqItems.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
                 className="border-b border-[#E0DDD5] last:border-b-0 px-5 will-change-transform"
