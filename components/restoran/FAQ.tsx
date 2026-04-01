@@ -71,11 +71,11 @@ export default function FAQ() {
           </div>
 
           <div className="w-full lg:w-[65%]">
-            <div className="flex flex-col border-t border-navy/[0.08]">
+            <div className="flex flex-col rounded-[20px] overflow-hidden bg-[#F7F5F0]">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
                 return (
-                  <div key={index} className="border-b border-navy/[0.08]">
+                  <div key={index} className="border-b border-[#E0DDD5] last:border-b-0 px-5">
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className="w-full flex items-center justify-between py-5 text-left transition-colors"

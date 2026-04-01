@@ -66,7 +66,7 @@ export default function FAQ() {
           </motion.div>
 
           {/* Right Accordion — 65% */}
-          <div className="flex-1">
+          <div className="flex-1 rounded-[20px] overflow-hidden bg-[#F7F5F0]">
             {faqs.map((faq, i) => {
               const isOpen = openIndex === i;
               return (
@@ -76,7 +76,7 @@ export default function FAQ() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
-                  className="border-b border-white/[0.06] border-[#E8E6E0] will-change-transform"
+                  className="border-b border-[#E0DDD5] last:border-b-0 px-5 will-change-transform"
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}

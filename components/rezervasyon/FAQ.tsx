@@ -66,7 +66,7 @@ export default function FAQ() {
           </motion.div>
 
           {/* Right accordion — 65% */}
-          <div className="lg:w-[65%]">
+          <div className="lg:w-[65%] rounded-[20px] overflow-hidden bg-[#F7F5F0]">
             {faqItems.map((item, i) => (
               <motion.div
                 key={i}
@@ -74,8 +74,7 @@ export default function FAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="border-b border-white/[0.06] will-change-transform"
-                style={{ borderBottomColor: 'rgba(10,22,40,0.08)' }}
+                className="border-b border-[#E0DDD5] last:border-b-0 px-5 will-change-transform"
               >
                 <button
                   onClick={() => toggle(i)}
